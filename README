@@ -1,0 +1,5 @@
+wtop is a simple network scanner based on curses interface and python using wicd
+
+Requirements: wicd, Unix-like operating system, curses
+
+wtop have builtin history, so you can move with your laptop and see where the signal is most strength
