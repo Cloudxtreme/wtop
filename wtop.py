@@ -21,11 +21,14 @@ daemon = dbus_ifaces['daemon']
 wireless = dbus_ifaces['wireless']
 [state, info] = daemon.GetConnectionStatus()
 myscreen = curses.initscr()
+curses.noecho()
+curses.cbreak()
 
 myscreen.clear()
 myscreen.border(0)
 myscreen.addstr(1, 1, "Scanning...")
 myscreen.refresh()
+myscreen.timeout(5000)
 
 def get_prop(net_id, prop):
         """ Get attribute of wireless network """
@@ -84,6 +87,13 @@ def main():
 
     myscreen.refresh()
 
+main()
 while True:
-     main()
-     time.sleep(5)
+    ch = myscreen.getch()
+    if ch == ord('q'):
+        curses.endwin()
+        exit()
+    else:
+        main()
+
+# vim: set ts=4 sts=4 sw=4 expandtab :
