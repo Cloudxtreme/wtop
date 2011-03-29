@@ -12,7 +12,7 @@ from dbus import DBusException
 try:
     dbusmanager.connect_to_dbus()
 except DBusException:
-        print "Cannot connect to WICD daemon, please be sure daemon is started before using wconfig. You can start daemon with /etc/init.d/wicd start, or /etc/rc.d/wicd start, or wicd from root account."
+        print "Cannot connect to WICD daemon, please be sure daemon is started before using wtop. You can start daemon with /etc/init.d/wicd start, or /etc/rc.d/wicd start, or wicd from root account."
         sys.exit()
 
 bus = dbusmanager.get_bus()
