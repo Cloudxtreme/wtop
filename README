@@ -5,3 +5,7 @@ Requirements: wicd, Unix-like operating system, curses
 wtop have builtin history, so you can move with your laptop and see where the signal is most strength
 
 Press q to exit, press anything else to refresh
+
+Changelog:
+29.07.2011 (v.1.0):
+    + Added changelog and versioning informations
